@@ -3,6 +3,10 @@
  All rights reserved.
 -->
 
+## 1.1.5
+
+- Added incomplete annotation utilities for working with Apis and experimental code
+
 ## 1.0.1
 
 - Initial version.
