@@ -3,7 +3,7 @@
 
 name: dart_utils
 description: A bundle of extensions, mixins, classes for dart/flutter projects.
-version: 1.1.5
+version: 1.1.8
 # homepage: https://www.example.com
 
 environment:
