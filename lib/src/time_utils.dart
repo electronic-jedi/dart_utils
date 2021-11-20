@@ -1,6 +1,14 @@
-/// Copyright (c) 2021 Jedi Hero https://www.github.com/jedi-hero
-/// All rights reserved.
 ///
+/// Filename: c:\Users\dalit\Desktop\dart_utils\lib\src\time_utils.dart
+/// Path: c:\Users\dalit\Desktop\dart_utils
+/// Created Date: Tuesday, November 9th 2021, 11:19:55 am
+/// Author: Dalitso Sakala
+///
+/// Copyright (c) 2021 Jedi Hero
+///
+
+/// A library to work with time
+library time;
 
 /// Extension utilities on the [Duration] class
 extension DurationUtils on Duration {
@@ -10,8 +18,6 @@ extension DurationUtils on Duration {
   }
 }
 
-
-
 /// Extension utilities on the [Duration] class
 extension DateUtils on DateTime {
   /// Attempts to get a slashed version of a date string.
@@ -19,7 +25,6 @@ extension DateUtils on DateTime {
   String get slashed {
     return '$day/$month/$year';
   }
-
 
   /// Attempts to get a dotted version of a date string.
   /// It returns the format `dd.mm.yyyy`
@@ -32,7 +37,6 @@ extension DateUtils on DateTime {
   String get localized {
     return '$day $monthName, $year';
   }
-
 
   /// Attempts to get the period of day from the [DateTime] instance.
   /// It returns either `"morning"`, `"afternoon"` or `"evening"`.

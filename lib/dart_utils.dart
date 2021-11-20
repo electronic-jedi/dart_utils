@@ -3,6 +3,7 @@
 ///
 library dart_utils;
 
-export 'src/time_utils.dart';
 export 'src/string_utils.dart';
-
+export 'src/annotations.dart';
+export 'src/time_utils.dart';
+export 'src/types.dart';
