@@ -1,11 +1,7 @@
-///
-/// Filename: c:\Users\dalit\Desktop\dart_utils\lib\src\gender.dart
-/// Path: c:\Users\dalit\Desktop\dart_utils
-/// Created Date: Saturday, November 20th 2021, 5:30:54 pm
-/// Author: Dalitso Sakala
-///
-/// Copyright (c) 2021 Jedi Hero
-///
+// Copyright (c) 2021 Jedi Hero
+//
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
 
 /// A dart library
 library gender;
@@ -16,6 +12,7 @@ enum Gender {
 }
 
 extension GenderUtils on Gender {
+  @Deprecated("Use the property on the enum API instead")
   String get name {
     switch (this) {
       case Gender.male:

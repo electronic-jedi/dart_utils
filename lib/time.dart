@@ -1,11 +1,7 @@
-///
-/// Filename: c:\Users\dalit\Desktop\dart_utils\lib\src\time_utils.dart
-/// Path: c:\Users\dalit\Desktop\dart_utils
-/// Created Date: Tuesday, November 9th 2021, 11:19:55 am
-/// Author: Dalitso Sakala
-///
-/// Copyright (c) 2021 Jedi Hero
-///
+// Copyright (c) 2021 Jedi Hero
+//
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
 
 /// A library to work with time
 library time;
@@ -50,7 +46,7 @@ extension DateUtils on DateTime {
 
   /// Attempts to get the name of the month.
   String get monthName {
-    var name;
+    String name;
     switch (month) {
       case 1:
         name = 'January';
@@ -86,6 +82,7 @@ extension DateUtils on DateTime {
         name = 'November';
         break;
       case 12:
+      default:
         name = 'December';
         break;
     }

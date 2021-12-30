@@ -1,9 +1,12 @@
-/// Copyright (c) 2021 Jedi Hero https://www.github.com/jedi-hero
-/// All rights reserved.
-///
+// Copyright (c) 2021 Jedi Hero
+//
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
 library dart_utils;
 
-export 'src/string_utils.dart';
-export 'src/annotations.dart';
-export 'src/time_utils.dart';
-export 'src/types.dart';
+export 'models/models.dart';
+export 'annotations.dart';
+export 'strings.dart';
+export 'numbers.dart';
+export 'time.dart';

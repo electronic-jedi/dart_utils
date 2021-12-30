@@ -1,13 +1,9 @@
-///
-/// Filename: c:\Users\dalit\Desktop\dart_utils\lib\src\string_utils.dart
-/// Path: c:\Users\dalit\Desktop\dart_utils
-/// Created Date: Tuesday, November 9th 2021, 11:11:47 am
-/// Author: Dalitso Sakala
-///
-/// Copyright (c) 2021 Jedi Hero
-///
+// Copyright (c) 2021 Jedi Hero
+//
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
 
-/// A library to work with strings
+/// A library to work with strings conforming to a format.
 library string;
 
 /// Extension to add more features to the [String] type.
@@ -24,4 +20,8 @@ extension StringUtils on String {
         .map((part) => part.capitalised)
         .join(' ');
   }
+}
+
+String? emptyAsNull(String arg) {
+  return arg.isEmpty ? null : arg;
 }

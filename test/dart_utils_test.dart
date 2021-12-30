@@ -1,6 +1,10 @@
-/// Copyright (c) 2021 Jedi Hero https://www.github.com/jedi-hero
-/// All rights reserved.
-///
+// Copyright (c) 2021 Jedi Hero
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+/// A dart library
+library test;
 
 void main() {
   /*group('A group of tests', () {

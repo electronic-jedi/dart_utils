@@ -3,7 +3,7 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-/// A dart library
-library example;
+library models;
 
-void main() {}
+export 'extras.dart';
+export 'gender.dart';
