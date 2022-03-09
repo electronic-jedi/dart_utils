@@ -12,16 +12,6 @@ enum Gender {
 }
 
 extension GenderUtils on Gender {
-  @Deprecated("Use the property on the enum API instead")
-  String get name {
-    switch (this) {
-      case Gender.male:
-        return 'Male';
-      case Gender.female:
-        return 'Female';
-    }
-  }
-
   /// Pass the name of the gender as a lowercase string
   static Gender? fromString(String? name) {
     switch (name?.toLowerCase()) {

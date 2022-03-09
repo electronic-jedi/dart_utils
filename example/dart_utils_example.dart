@@ -6,4 +6,9 @@
 /// A dart library
 library example;
 
-void main() {}
+import 'package:dart_utils/dart_utils.dart';
+
+void main() {
+  final date = DateTime.now();
+  print(date.timeOfDaySimplified);
+}

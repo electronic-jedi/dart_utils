@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Jedi Hero
+// Copyright (c) 2022 Jedi Hero
 //
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
@@ -44,7 +44,19 @@ extension DateUtils on DateTime {
             : 'evening';
   }
 
-  /// Attempts to get the name of the month.
+  /// Get the time in the format `1:04 PM`.
+  String get timeOfDaySimplified {
+    final suffix = hour >= 12 ? 'PM' : 'AM';
+    final _hour = hour > 12 ? hour - 12 : hour;
+    return '$_hour:$minute $suffix';
+  }
+
+  /// Get the time in the format `13:04`.
+  String get timeOfDay {
+    return '$hour:$minute';
+  }
+
+  /// Attempts to get the full name of the month.
   String get monthName {
     String name;
     switch (month) {
