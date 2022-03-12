@@ -40,6 +40,9 @@ extension DurationUtils on Duration {
     } else if (inDays >= 1) {
       elapsed = inDays;
       suffix = 'day' + _plural(inDays);
+    } else if (inHours >= 1) {
+      elapsed = inHours;
+      suffix = 'hour' + _plural(inHours);
     } else if (inMinutes >= 1) {
       elapsed = inMinutes;
       suffix = 'minute' + _plural(inMinutes);
