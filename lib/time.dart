@@ -31,21 +31,21 @@ extension DurationUtils on Duration {
     int elapsed = 0;
     String suffix;
 
-    if (year >= 1) {
-      elapsed = year;
-      suffix = 'year' + _plural(year);
-    } else if (month >= 1) {
-      elapsed = month;
-      suffix = 'month' + _plural(month);
-    } else if (day >= 1) {
-      elapsed = day;
-      suffix = 'day' + _plural(day);
-    } else if (minute >= 1) {
-      elapsed = minute;
-      suffix = 'minute' + _plural(minute);
+    if (inDays ~/ 365.25 >= 1) {
+      elapsed = inDays ~/ 365.25;
+      suffix = 'year' + _plural(elapsed);
+    } else if (inDays ~/ 31 >= 1) {
+      elapsed = inDays ~/ 30;
+      suffix = 'about month' + _plural(elapsed);
+    } else if (inDays >= 1) {
+      elapsed = inDays;
+      suffix = 'day' + _plural(inDays);
+    } else if (inMinutes >= 1) {
+      elapsed = inMinutes;
+      suffix = 'minute' + _plural(inMinutes);
     } else {
-      elapsed = second;
-      suffix = 'second' + _plural(second);
+      elapsed = inSeconds;
+      suffix = 'second' + _plural(inSeconds);
     }
     return '$elapsed $suffix';
   }
