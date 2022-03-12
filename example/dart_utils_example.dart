@@ -9,6 +9,6 @@ library example;
 import 'package:dart_utils/dart_utils.dart';
 
 void main() {
-  final date = DateTime.now();
-  print(date.timeOfDaySimplified);
+  final date = DateTime(0,0,0,13);
+  print(date.elapsedDuration_);
 }

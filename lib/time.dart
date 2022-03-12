@@ -79,21 +79,30 @@ extension DateUtils on DateTime {
     return '$hour:$_minute';
   }
 
+/// Get elapsed time of date.
+/// * You can use [DateTime.subtract]
+/// to find elapsed time between two date.
   String get elapsedDuration_ {
-    String elapsed;
+    int elapsed=0;
     String suffix;
-
-    if (year >= 1)
+    
+    if (year >= 1){
+      elapsed=year;
       suffix = 'year' + _plural(year);
-    else if (month >= 1)
+   } else if (month >= 1){
+      elapsed=month;
       suffix = 'month' + _plural(month);
-    else if (day >= 1)
+    }else if (day >= 1){
+      elapsed=day;
       suffix = 'day' + _plural(day);
-    else if (minute >= 1)
+    }else if (minute >= 1){
+      elapsed=minute;
       suffix = 'minute' + _plural(minute);
-    else
+    }else{
+      elapsed=second;
       suffix = 'second' + _plural(second);
-    return elapsed;
+	}
+    return '$elapsed $suffix';
   }
 
   /// Attempts to get the full name of the month.
