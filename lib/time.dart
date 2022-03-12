@@ -45,15 +45,23 @@ extension DateUtils on DateTime {
   }
 
   /// Get the time in the format `1:04 PM`.
+  @Deprecated('use `meridianTime` instead')
   String get timeOfDaySimplified {
+    return meridianTime;
+  }
+
+  /// Get the time in the format `1:04 PM`.
+  String get meridianTime {
     final suffix = hour >= 12 ? 'PM' : 'AM';
     final _hour = hour > 12 ? hour - 12 : hour;
-    return '$_hour:$minute $suffix';
+    final _minute = minute < 10 ? '0$minute' : minute;
+    return '$_hour:$_minute $suffix';
   }
 
   /// Get the time in the format `13:04`.
   String get timeOfDay {
-    return '$hour:$minute';
+    final _minute = minute < 10 ? '0$minute' : minute;
+    return '$hour:$_minute';
   }
 
   /// Attempts to get the full name of the month.
