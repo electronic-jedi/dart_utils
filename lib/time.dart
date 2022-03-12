@@ -16,8 +16,38 @@ String _plural(int quantity, [String plural = 's', String singular = '', int thr
 /// Extension utilities on the [Duration] class
 extension DurationUtils on Duration {
   /// Attempts to get the duration in years
-  int get inYears {
+  @Deprecated('use "inYears_" instead')
+  int get inYears => inYears_;
+
+  /// Attempts to get the duration in years
+  int get inYears_ {
     return inDays ~/ 365;
+  }
+
+  /// Get elapsed time of date.
+  /// * You can use [DateTime.subtract]
+  /// to find elapsed time between two dates.
+  String get elapsedDuration_ {
+    int elapsed = 0;
+    String suffix;
+
+    if (year >= 1) {
+      elapsed = year;
+      suffix = 'year' + _plural(year);
+    } else if (month >= 1) {
+      elapsed = month;
+      suffix = 'month' + _plural(month);
+    } else if (day >= 1) {
+      elapsed = day;
+      suffix = 'day' + _plural(day);
+    } else if (minute >= 1) {
+      elapsed = minute;
+      suffix = 'minute' + _plural(minute);
+    } else {
+      elapsed = second;
+      suffix = 'second' + _plural(second);
+    }
+    return '$elapsed $suffix';
   }
 }
 
@@ -77,32 +107,6 @@ extension DateUtils on DateTime {
   String get timeOfDay_ {
     final _minute = minute < 10 ? '0$minute' : minute;
     return '$hour:$_minute';
-  }
-
-/// Get elapsed time of date.
-/// * You can use [DateTime.subtract]
-/// to find elapsed time between two date.
-  String get elapsedDuration_ {
-    int elapsed=0;
-    String suffix;
-    
-    if (year >= 1){
-      elapsed=year;
-      suffix = 'year' + _plural(year);
-   } else if (month >= 1){
-      elapsed=month;
-      suffix = 'month' + _plural(month);
-    }else if (day >= 1){
-      elapsed=day;
-      suffix = 'day' + _plural(day);
-    }else if (minute >= 1){
-      elapsed=minute;
-      suffix = 'minute' + _plural(minute);
-    }else{
-      elapsed=second;
-      suffix = 'second' + _plural(second);
-	}
-    return '$elapsed $suffix';
   }
 
   /// Attempts to get the full name of the month.
