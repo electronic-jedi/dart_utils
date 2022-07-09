@@ -36,7 +36,7 @@ extension DurationUtils on Duration {
       suffix = 'year' + _plural(elapsed);
     } else if (inDays ~/ 31 >= 1) {
       elapsed = inDays ~/ 30;
-      suffix = 'about month' + _plural(elapsed);
+      suffix = 'month' + _plural(elapsed);
     } else if (inDays >= 1) {
       elapsed = inDays;
       suffix = 'day' + _plural(inDays);
