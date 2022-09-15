@@ -9,15 +9,16 @@ library string;
 /// Extension to add more features to the [String] type.
 extension StringUtils on String {
   /// Attempts to return the first letter of a string as uppercase
-  String get capitalised {
+  String get capitalized {
     return trim()[0].toUpperCase() + (length > 1 ? substring(1) : '');
   }
-
+  @Deprecated('Use capitalized instead')
+  String get capitalised=>capitalized;
   /// Attempts to return the first letter of each word in a string as uppercase
   String get nameFormat {
     return trim()
         .split(RegExp(r'\s+'))
-        .map((part) => part.capitalised)
+        .map((part) => part.capitalized)
         .join(' ');
   }
 }
