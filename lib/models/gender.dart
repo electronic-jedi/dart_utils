@@ -9,16 +9,19 @@ library gender;
 enum Gender {
   male,
   female,
+  both
 }
 
 extension GenderUtils on Gender {
   /// Pass the name of the gender as a lowercase string
   static Gender? fromString(String? name) {
-    switch (name?.toLowerCase()) {
+    switch (name?.toLowerCase().trim()) {
       case 'male':
         return Gender.male;
       case 'female':
         return Gender.female;
+      case 'both':
+        return Gender.both;
       default:
         return null;
     }
